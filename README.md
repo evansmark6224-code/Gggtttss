@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прямая Трансляция | LIVE SPORT</title>
+    <style>
+        body {
+            background-color: #0b0e14;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 854px;
+            text-align: center;
+        }
+        .video-box {
+            position: relative;
+            padding-bottom: 56.25%; /* Пропорции 16:9 */
+            height: 0;
+            overflow: hidden;
+            background: #000000;
+            border-radius: 12px;
+            box-shadow: 0px 0px 25px rgba(0, 150, 255, 0.2);
+            margin-bottom: 25px;
+        }
+        .video-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            width: 100%;
+        }
+        .btn {
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ffffff;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        .btn-tg { background-color: #24A1DE; }
+        .btn-tg:hover { background-color: #1a80b0; transform: translateY(-2px); }
+        .btn-donate { background-color: #FF9900; }
+        .btn-donate:hover { background-color: #cc7a00; transform: translateY(-2px); }
+        .btn-refresh { background-color: #28a745; }
+        .btn-refresh:hover { background-color: #1e7e34; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="video-box">
+            <iframe src="ЗДЕСЬ_ССЫЛКА_НА_ТВОЙ_СТРИМ" allowfullscreen></iframe>
+        </div>
+
+        <div class="buttons-grid">
+            <a href="https://t.me/ТВОЙ_КАНАЛ" target="_blank" class="btn btn-tg">Наш Telegram</a>
+            <a href="https://www.donationalerts.com/r/ТВОЙ_НИК" target="_blank" class="btn btn-donate">Поддержать (Донат)</a>
+            <a href="javascript:location.reload();" class="btn btn-refresh">Обновить Плеер</a>
+        </div>
+    </div>
+
+</body>
+</html>
+
